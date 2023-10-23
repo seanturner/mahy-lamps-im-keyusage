@@ -58,7 +58,8 @@ to validate a TLS connection because it has the KeyPurposeId `id-kp-serverAuth` 
 `id-kp-clientAuth`.
 
 An explanation of MLS credentials as they apply to Instant Messaging is described
-in {{?I-D.barnes-mimi-identity-arch}}.
+in {{?I-D.barnes-mimi-identity-arch}}. These credentials are expected to be
+heavily used in the More Instant Messaging Interoperability (MIMI) Working Group.
 
 
 # Conventions and Definitions
@@ -68,7 +69,7 @@ in {{?I-D.barnes-mimi-identity-arch}}.
 # The IM URI Extended Key Usage
 
 This specification defines the KeyPurposeId id-kp-imUri, which is used
-for signing messages to prove the identity of an Instant Messaging client. 
+for signing messages to prove the identity of an Instant Messaging client.
 
 ~~~
 id-kp  OBJECT IDENTIFIER  ::= {
@@ -91,9 +92,8 @@ IANA is requested to register the following OIDs in the "SMI Security
 for PKIX Extended Key Purpose" registry (1.3.6.1.5.5.7.3).  These
 OIDs are defined in Section 4.
 
-   +=========+===============================+============+
-   | Decimal | Description                   | References |
-   +=========+===============================+============+
-   | TBD     | id-kp-imUri                   | This-RFC   |
+| Decimal | Description   | References |
+|:--------|:--------------|:-----------|
+| TBD     | id-kp-imUri   | This-RFC   |
 
 --- back
