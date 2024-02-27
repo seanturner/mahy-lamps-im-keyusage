@@ -1,7 +1,7 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-25T00:57:02.039947+00:00",
-  "repo": "rohan-wire/mahy-lamps-im-keyusage",
+  "timestamp": "2024-02-27T00:52:33.164318+00:00",
+  "repo": "rohanmahy/mahy-lamps-im-keyusage",
   "labels": [
     {
       "name": "bug",
@@ -54,7 +54,7 @@
       "number": 1,
       "id": "I_kwDOKkJho852PudH",
       "title": "Add ASN.1 module",
-      "url": "https://github.com/rohan-wire/mahy-lamps-im-keyusage/issues/1",
+      "url": "https://github.com/rohanmahy/mahy-lamps-im-keyusage/issues/1",
       "state": "OPEN",
       "author": "seanturner",
       "authorAssociation": "NONE",
@@ -70,7 +70,7 @@
       "number": 2,
       "id": "I_kwDOKkJho852PvKN",
       "title": "State Criticality",
-      "url": "https://github.com/rohan-wire/mahy-lamps-im-keyusage/issues/2",
+      "url": "https://github.com/rohanmahy/mahy-lamps-im-keyusage/issues/2",
       "state": "OPEN",
       "author": "seanturner",
       "authorAssociation": "NONE",
