@@ -18,20 +18,31 @@ keyword:
  - eku
  - instant messaging
  - im URI
+ - mimi URL
 venue:
   group: LAMPS WG
   type: Working Group
   mail: lamps@ietf.org
-  github: rohan-wire/mahy-lamps-im-keyusage
-  latest: https://example.com/LATEST
+  github: rohanmahy/mahy-lamps-im-keyusage
+  # latest: https://example.com/LATEST
 
 author:
  -
     fullname: Rohan Mahy
-    organization: Wire
-    email: rohan.mahy@wire.com
+    organization: Unaffiliated
+    email: rohan.ietf@gmail.com
 
 normative:
+  ASN.1:
+    title: >
+      Information Technology — ASN.1 encoding rules:
+      Specification of Basic Encoding Rules (BER), Canonical Encoding
+      Rules (CER) and Distinguished Encoding Rules (DER)
+    author:
+      org: International Telecommunications Union
+    date: 1994
+    seriesinfo:
+      ITU-T: Recommendation X.690
 
 informative:
 
@@ -40,7 +51,7 @@ informative:
 
 RFC 5280 specifies several extended key purpose identifiers
 (KeyPurposeIds) for X.509 certificates.  This document defines
-Instant Messaging (IM) identity KeyPurposeIds for inclusion in
+Instant Messaging (IM) identity KeyPurposeId for inclusion in
 the Extended Key Usage (EKU) extension of X.509 v3 public key
 certificates
 
@@ -70,6 +81,7 @@ heavily used in the More Instant Messaging Interoperability (MIMI) Working Group
 
 This specification defines the KeyPurposeId id-kp-imUri, which is used
 for signing messages to prove the identity of an Instant Messaging client.
+This Extended Key Usage is optionally critical.
 
 ~~~
 id-kp  OBJECT IDENTIFIER  ::= {
@@ -78,6 +90,8 @@ id-kp  OBJECT IDENTIFIER  ::= {
 
 id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD }
 ~~~
+
+
 
 # Security Considerations
 
@@ -94,6 +108,41 @@ OIDs are defined in Section 4.
 
 | Decimal | Description   | References |
 |:--------|:--------------|:-----------|
-| TBD     | id-kp-imUri   | This-RFC   |
+| TBD1    | id-kp-imUri   | This-RFC   |
+
+IANA is also requested to register the following ASN.1 {{ASN.1}} module OID in the "SMI Security for PKIX Module Identifier" registry (1.3.6.1.5.5.7.0). This OID is defined in Appendix A.
+
+| Decimal | Description   | References |
+|:--------|:--------------|:-----------|
+| TBD2    | id-kp-im-eku  | This-RFC   |
 
 --- back
+
+# ASN.1 Module
+
+~~~ asn1
+<CODE BEGINS>
+
+NF-EKU
+  { iso(1) identified-organization(3) dod(6) internet(1)
+  security(5) mechanisms(5) pkix(7) id-mod(0)
+  id-mod-im-eku (TBD2) }
+
+DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+
+-- OID Arc
+
+id-kp OBJECT IDENTIFIER ::=
+  { iso(1) identified-organization(3) dod(6) internet(1)
+    security(5) mechanisms(5) pkix(7) kp(3) }
+
+-- Extended Key Usage Values
+
+id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
+
+END
+
+
+<CODE ENDS>
+~~~
