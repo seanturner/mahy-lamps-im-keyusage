@@ -3,9 +3,9 @@
 
 
 LAMPS WG                                                         R. Mahy
-Internet-Draft                                                      Wire
-Intended status: Informational                           23 October 2023
-Expires: 25 April 2024
+Internet-Draft                                              Unaffiliated
+Intended status: Informational                              5 March 2024
+Expires: 6 September 2024
 
 
  X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs
@@ -15,7 +15,7 @@ Abstract
 
    RFC 5280 specifies several extended key purpose identifiers
    (KeyPurposeIds) for X.509 certificates.  This document defines
-   Instant Messaging (IM) identity KeyPurposeIds for inclusion in the
+   Instant Messaging (IM) identity KeyPurposeId for inclusion in the
    Extended Key Usage (EKU) extension of X.509 v3 public key
    certificates
 
@@ -23,10 +23,8 @@ About This Document
 
    This note is to be removed before publishing as an RFC.
 
-   The latest revision of this draft can be found at
-   https://example.com/LATEST.  Status information for this document may
-   be found at https://datatracker.ietf.org/doc/draft-mahy-lamps-im-
-   keyusage/.
+   Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-mahy-lamps-im-keyusage/.
 
    Discussion of this document takes place on the LAMPS WG Working Group
    mailing list (mailto:lamps@ietf.org), which is archived at
@@ -34,7 +32,7 @@ About This Document
    https://www.ietf.org/mailman/listinfo/lamps/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/rohan-wire/mahy-lamps-im-keyusage.
+   https://github.com/rohanmahy/mahy-lamps-im-keyusage.
 
 Status of This Memo
 
@@ -51,11 +49,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 April 2024.
+   This Internet-Draft will expire on 6 September 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -77,6 +75,7 @@ Table of Contents
    6.  References
      6.1.  Normative References
      6.2.  Informative References
+   Appendix A.  ASN.1 Module
    Author's Address
 
 1.  Introduction
@@ -106,7 +105,7 @@ Table of Contents
 
    This specification defines the KeyPurposeId id-kp-imUri, which is
    used for signing messages to prove the identity of an Instant
-   Messaging client.
+   Messaging client.  This Extended Key Usage is optionally critical.
 
    id-kp  OBJECT IDENTIFIER  ::= {
      iso(1) identified-organization(3) dod(6) internet(1)
@@ -130,14 +129,32 @@ Table of Contents
                   +=========+=============+============+
                   | Decimal | Description | References |
                   +=========+=============+============+
-                  | TBD     | id-kp-imUri | This-RFC   |
+                  | TBD1    | id-kp-imUri | This-RFC   |
                   +---------+-------------+------------+
 
                                  Table 1
 
+   IANA is also requested to register the following ASN.1 [ASN.1] module
+   OID in the "SMI Security for PKIX Module Identifier" registry
+   (1.3.6.1.5.5.7.0).  This OID is defined in Appendix A.
+
+                  +=========+==============+============+
+                  | Decimal | Description  | References |
+                  +=========+==============+============+
+                  | TBD2    | id-kp-im-eku | This-RFC   |
+                  +---------+--------------+------------+
+
+                                  Table 2
+
 6.  References
 
 6.1.  Normative References
+
+   [ASN.1]    International Telecommunications Union, "Information
+              Technology — ASN.1 encoding rules: Specification of Basic
+              Encoding Rules (BER), Canonical Encoding Rules (CER) and
+              Distinguished Encoding Rules (DER)", ITU-T Recommendation
+              X.690, 1994.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -159,17 +176,44 @@ Table of Contents
    [I-D.barnes-mimi-identity-arch]
               Barnes, R. and R. Mahy, "Identity for E2E-Secure
               Communications", Work in Progress, Internet-Draft, draft-
-              barnes-mimi-identity-arch-00, 24 October 2022,
+              barnes-mimi-identity-arch-01, 23 October 2023,
               <https://datatracker.ietf.org/doc/html/draft-barnes-mimi-
-              identity-arch-00>.
+              identity-arch-01>.
 
    [RFC9420]  Barnes, R., Beurdouche, B., Robert, R., Millican, J.,
               Omara, E., and K. Cohn-Gordon, "The Messaging Layer
               Security (MLS) Protocol", RFC 9420, DOI 10.17487/RFC9420,
               July 2023, <https://www.rfc-editor.org/rfc/rfc9420>.
 
+Appendix A.  ASN.1 Module
+
+   <CODE BEGINS>
+
+   NF-EKU
+     { iso(1) identified-organization(3) dod(6) internet(1)
+     security(5) mechanisms(5) pkix(7) id-mod(0)
+     id-mod-im-eku (TBD2) }
+
+   DEFINITIONS IMPLICIT TAGS ::=
+   BEGIN
+
+   -- OID Arc
+
+   id-kp OBJECT IDENTIFIER ::=
+     { iso(1) identified-organization(3) dod(6) internet(1)
+       security(5) mechanisms(5) pkix(7) kp(3) }
+
+   -- Extended Key Usage Values
+
+   id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
+
+   END
+
+
+   <CODE ENDS>
+
 Author's Address
 
    Rohan Mahy
-   Wire
-   Email: rohan.mahy@wire.com
+   Unaffiliated
+   Email: rohan.ietf@gmail.com
