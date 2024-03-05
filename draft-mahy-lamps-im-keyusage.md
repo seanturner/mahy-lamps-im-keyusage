@@ -146,3 +146,8 @@ END
 
 <CODE ENDS>
 ~~~
+
+# Change log
+
+* added ASN.1 module
+* specified that eku is optionally critical
