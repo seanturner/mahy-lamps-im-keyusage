@@ -76,6 +76,7 @@ Table of Contents
      6.1.  Normative References
      6.2.  Informative References
    Appendix A.  ASN.1 Module
+   Appendix B.  Change log
    Author's Address
 
 1.  Introduction
@@ -211,6 +212,12 @@ Appendix A.  ASN.1 Module
 
 
    <CODE ENDS>
+
+Appendix B.  Change log
+
+   *  added ASN.1 module
+
+   *  specified that eku is optionally critical
 
 Author's Address
 
