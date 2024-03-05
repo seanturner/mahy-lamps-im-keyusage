@@ -2,16 +2,16 @@
 
 This is the working area for the individual Internet-Draft, "X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs".
 
-* [Editor's Copy](https://rohan-wire.github.io/mahy-lamps-im-keyusage/#go.draft-mahy-lamps-im-keyusage.html)
+* [Editor's Copy](https://rohanmahy.github.io/mahy-lamps-im-keyusage/#go.draft-mahy-lamps-im-keyusage.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-mahy-lamps-im-keyusage)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-mahy-lamps-im-keyusage)
-* [Compare Editor's Copy to Individual Draft](https://rohan-wire.github.io/mahy-lamps-im-keyusage/#go.draft-mahy-lamps-im-keyusage.diff)
+* [Compare Editor's Copy to Individual Draft](https://rohanmahy.github.io/mahy-lamps-im-keyusage/#go.draft-mahy-lamps-im-keyusage.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/rohan-wire/mahy-lamps-im-keyusage/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/rohanmahy/mahy-lamps-im-keyusage/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
