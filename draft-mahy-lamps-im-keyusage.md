@@ -24,7 +24,7 @@ venue:
   type: Working Group
   mail: lamps@ietf.org
   github: rohanmahy/mahy-lamps-im-keyusage
-  # latest: https://example.com/LATEST
+  latest: https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-mahy-lamps-im-keyusage.html
 
 author:
  -
@@ -33,16 +33,27 @@ author:
     email: rohan.ietf@gmail.com
 
 normative:
-  ASN.1:
+  ITU.X690.2021:
     title: >
       Information Technology — ASN.1 encoding rules:
-      Specification of Basic Encoding Rules (BER), Canonical Encoding
-      Rules (CER) and Distinguished Encoding Rules (DER)
+      Specification of Basic Encoding Rules (BER),
+      Canonical Encoding Rules (CER)
+      and Distinguished Encoding Rules (DER)
     author:
       org: International Telecommunications Union
-    date: 1994
+    date: 2021
     seriesinfo:
       ITU-T: Recommendation X.690
+
+  ITU.X680.2021:
+    title: >
+      Information Technology — Abstract Syntax Notation One (ASN.1):
+      Specification of basic notation
+    author:
+      org: International Telecommunications Union
+    date: 2021
+    seriesinfo:
+      ITU-T: Recommendation X.680
 
 informative:
 
@@ -110,7 +121,8 @@ OIDs are defined in Section 4.
 |:--------|:--------------|:-----------|
 | TBD1    | id-kp-imUri   | This-RFC   |
 
-IANA is also requested to register the following ASN.1 {{ASN.1}} module OID in the "SMI Security for PKIX Module Identifier" registry (1.3.6.1.5.5.7.0). This OID is defined in Appendix A.
+IANA is also requested to register the following ASN.1 {{ITU.X690.2021}}
+module OID in the "SMI Security for PKIX Module Identifier" registry (1.3.6.1.5.5.7.0). This OID is defined in {{asn1-module}}.
 
 | Decimal | Description   | References |
 |:--------|:--------------|:-----------|
@@ -118,7 +130,10 @@ IANA is also requested to register the following ASN.1 {{ASN.1}} module OID in t
 
 --- back
 
-# ASN.1 Module
+# ASN.1 Module {#asn1-module}
+
+The following module adheres to ASN.1 specifications {{ITU.X680.2021}} and
+{{ITU.X690.2021}}.
 
 ~~~ asn1
 <CODE BEGINS>
