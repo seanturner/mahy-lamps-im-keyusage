@@ -99,7 +99,7 @@ id-kp  OBJECT IDENTIFIER  ::= {
   iso(1) identified-organization(3) dod(6) internet(1)
   security(5) mechanisms(5) pkix(7) kp(3) }
 
-id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD }
+id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
 ~~~
 
 
