@@ -4,8 +4,8 @@
 
 LAMPS WG                                                         R. Mahy
 Internet-Draft                                              Unaffiliated
-Intended status: Informational                             16 March 2024
-Expires: 17 September 2024
+Intended status: Informational                             17 March 2024
+Expires: 18 September 2024
 
 
  X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 September 2024.
+   This Internet-Draft will expire on 18 September 2024.
 
 Copyright Notice
 
@@ -114,7 +114,7 @@ Table of Contents
      iso(1) identified-organization(3) dod(6) internet(1)
      security(5) mechanisms(5) pkix(7) kp(3) }
 
-   id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD }
+   id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
 
 4.  Security Considerations
 
