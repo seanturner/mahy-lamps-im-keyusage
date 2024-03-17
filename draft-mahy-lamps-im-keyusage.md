@@ -138,7 +138,7 @@ The following module adheres to ASN.1 specifications {{ITU.X680.2021}} and
 ~~~ asn1
 <CODE BEGINS>
 
-NF-EKU
+IM-EKU
   { iso(1) identified-organization(3) dod(6) internet(1)
   security(5) mechanisms(5) pkix(7) id-mod(0)
   id-mod-im-eku (TBD2) }
