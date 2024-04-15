@@ -35,7 +35,7 @@ author:
 normative:
   ITU.X690.2021:
     title: >
-      Information Technology — ASN.1 encoding rules:
+      Information Technology - ASN.1 encoding rules:
       Specification of Basic Encoding Rules (BER),
       Canonical Encoding Rules (CER)
       and Distinguished Encoding Rules (DER)
@@ -47,7 +47,7 @@ normative:
 
   ITU.X680.2021:
     title: >
-      Information Technology — Abstract Syntax Notation One (ASN.1):
+      Information Technology - Abstract Syntax Notation One (ASN.1):
       Specification of basic notation
     author:
       org: International Telecommunications Union
