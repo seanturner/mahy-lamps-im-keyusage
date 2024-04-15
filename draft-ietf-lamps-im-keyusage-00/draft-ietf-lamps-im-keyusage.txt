@@ -1,0 +1,240 @@
+
+
+
+
+LAMPS WG                                                         R. Mahy
+Internet-Draft                                              Unaffiliated
+Intended status: Informational                             15 April 2024
+Expires: 17 October 2024
+
+
+ X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs
+                  draft-ietf-lamps-im-keyusage-latest
+
+Abstract
+
+   RFC 5280 specifies several extended key purpose identifiers
+   (KeyPurposeIds) for X.509 certificates.  This document defines
+   Instant Messaging (IM) identity KeyPurposeId for inclusion in the
+   Extended Key Usage (EKU) extension of X.509 v3 public key
+   certificates
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   The latest revision of this draft can be found at
+   https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-ietf-lamps-
+   im-keyusage.html.  Status information for this document may be found
+   at https://datatracker.ietf.org/doc/draft-ietf-lamps-im-keyusage/.
+
+   Discussion of this document takes place on the LAMPS WG Working Group
+   mailing list (mailto:lamps@ietf.org), which is archived at
+   https://mailarchive.ietf.org/arch/browse/lamps/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/lamps/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/rohanmahy/mahy-lamps-im-keyusage.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 17 October 2024.
+
+Copyright Notice
+
+   Copyright (c) 2024 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+   2.  Conventions and Definitions
+   3.  The IM URI Extended Key Usage
+   4.  Security Considerations
+   5.  IANA Considerations
+   6.  References
+     6.1.  Normative References
+     6.2.  Informative References
+   Appendix A.  ASN.1 Module
+   Appendix B.  Change log
+   Author's Address
+
+1.  Introduction
+
+   Instant Messaging (IM) systems using the Messaging Layer Security
+   (MLS) [RFC9420] protocol can incorporate per-client identity
+   certificate credentials.  The subjectAltName of these certificates
+   can be an IM URI, for example.  Since IM clients could be very
+   numerous, operators are reticent to issue certificates for these
+   users that might accidentally be used to validate a TLS connection
+   because it has the KeyPurposeId id-kp-serverAuth or id-kp-clientAuth.
+
+   An explanation of MLS credentials as they apply to Instant Messaging
+   is described in [I-D.barnes-mimi-identity-arch].  These credentials
+   are expected to be heavily used in the More Instant Messaging
+   Interoperability (MIMI) Working Group.
+
+2.  Conventions and Definitions
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+3.  The IM URI Extended Key Usage
+
+   This specification defines the KeyPurposeId id-kp-imUri, which is
+   used for signing messages to prove the identity of an Instant
+   Messaging client.  This Extended Key Usage is optionally critical.
+
+   id-kp  OBJECT IDENTIFIER  ::= {
+     iso(1) identified-organization(3) dod(6) internet(1)
+     security(5) mechanisms(5) pkix(7) kp(3) }
+
+   id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
+
+4.  Security Considerations
+
+   The Security Considerations of [RFC5280] are applicable to this
+   document.  This extended key purpose does not introduce new security
+   risks but instead reduces existing security risks by providing means
+   to identify if the certificate is generated to sign IM identity
+   credentials.
+
+5.  IANA Considerations
+
+   IANA is requested to register the following OIDs in the "SMI Security
+   for PKIX Extended Key Purpose" registry (1.3.6.1.5.5.7.3).  These
+   OIDs are defined in Section 4.
+
+                  +=========+=============+============+
+                  | Decimal | Description | References |
+                  +=========+=============+============+
+                  | TBD1    | id-kp-imUri | This-RFC   |
+                  +---------+-------------+------------+
+
+                                 Table 1
+
+   IANA is also requested to register the following ASN.1
+   [ITU.X690.2021] module OID in the "SMI Security for PKIX Module
+   Identifier" registry (1.3.6.1.5.5.7.0).  This OID is defined in
+   Appendix A.
+
+                  +=========+==============+============+
+                  | Decimal | Description  | References |
+                  +=========+==============+============+
+                  | TBD2    | id-kp-im-eku | This-RFC   |
+                  +---------+--------------+------------+
+
+                                  Table 2
+
+6.  References
+
+6.1.  Normative References
+
+   [ITU.X680.2021]
+              International Telecommunications Union, "Information
+              Technology — Abstract Syntax Notation One (ASN.1):
+              Specification of basic notation", ITU-T Recommendation
+              X.680, 2021.
+
+   [ITU.X690.2021]
+              International Telecommunications Union, "Information
+              Technology — ASN.1 encoding rules: Specification of Basic
+              Encoding Rules (BER), Canonical Encoding Rules (CER) and
+              Distinguished Encoding Rules (DER)", ITU-T Recommendation
+              X.690, 2021.
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC5280]  Cooper, D., Santesson, S., Farrell, S., Boeyen, S.,
+              Housley, R., and W. Polk, "Internet X.509 Public Key
+              Infrastructure Certificate and Certificate Revocation List
+              (CRL) Profile", RFC 5280, DOI 10.17487/RFC5280, May 2008,
+              <https://www.rfc-editor.org/rfc/rfc5280>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+6.2.  Informative References
+
+   [I-D.barnes-mimi-identity-arch]
+              Barnes, R. and R. Mahy, "Identity for E2E-Secure
+              Communications", Work in Progress, Internet-Draft, draft-
+              barnes-mimi-identity-arch-01, 23 October 2023,
+              <https://datatracker.ietf.org/doc/html/draft-barnes-mimi-
+              identity-arch-01>.
+
+   [RFC9420]  Barnes, R., Beurdouche, B., Robert, R., Millican, J.,
+              Omara, E., and K. Cohn-Gordon, "The Messaging Layer
+              Security (MLS) Protocol", RFC 9420, DOI 10.17487/RFC9420,
+              July 2023, <https://www.rfc-editor.org/rfc/rfc9420>.
+
+Appendix A.  ASN.1 Module
+
+   The following module adheres to ASN.1 specifications [ITU.X680.2021]
+   and [ITU.X690.2021].
+
+   <CODE BEGINS>
+
+   IM-EKU
+     { iso(1) identified-organization(3) dod(6) internet(1)
+     security(5) mechanisms(5) pkix(7) id-mod(0)
+     id-mod-im-eku (TBD2) }
+
+   DEFINITIONS IMPLICIT TAGS ::=
+   BEGIN
+
+   -- OID Arc
+
+   id-kp OBJECT IDENTIFIER ::=
+     { iso(1) identified-organization(3) dod(6) internet(1)
+       security(5) mechanisms(5) pkix(7) kp(3) }
+
+   -- Extended Key Usage Values
+
+   id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
+
+   END
+
+
+   <CODE ENDS>
+
+Appendix B.  Change log
+
+   *  added ASN.1 module
+
+   *  specified that eku is optionally critical
+
+Author's Address
+
+   Rohan Mahy
+   Unaffiliated
+   Email: rohan.ietf@gmail.com
