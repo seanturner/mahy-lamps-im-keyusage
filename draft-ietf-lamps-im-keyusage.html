@@ -13,7 +13,7 @@ Instant Messaging (IM) identity KeyPurposeId for inclusion in
 the Extended Key Usage (EKU) extension of X.509 v3 public key
 certificates 
     " name="description">
-<meta content="xml2rfc 3.20.0" name="generator">
+<meta content="xml2rfc 3.20.1" name="generator">
 <meta content="x.509" name="keyword">
 <meta content="certificate" name="keyword">
 <meta content="extended key usage" name="keyword">
@@ -21,9 +21,9 @@ certificates
 <meta content="instant messaging" name="keyword">
 <meta content="im URI" name="keyword">
 <meta content="mimi URL" name="keyword">
-<meta content="draft-mahy-lamps-im-keyusage-latest" name="ietf.draft">
+<meta content="draft-ietf-lamps-im-keyusage-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.20.0
+  xml2rfc 3.20.1
     Python 3.11.8
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
@@ -38,7 +38,7 @@ certificates
     six 1.16.0
     wcwidth 0.2.13
 -->
-<link href="draft-mahy-lamps-im-keyusage.xml" rel="alternate" type="application/rfc+xml">
+<link href="draft-ietf-lamps-im-keyusage.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
 <style type="text/css">@font-face {
   font-family: 'Lora';
@@ -1035,11 +1035,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">extendedKeyUsage for IM URIs</td>
-<td class="right">March 2024</td>
+<td class="right">April 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Mahy</td>
-<td class="center">Expires 18 September 2024</td>
+<td class="center">Expires 17 October 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1049,15 +1049,15 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dt class="label-workgroup">Workgroup:</dt>
 <dd class="workgroup">LAMPS WG</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-mahy-lamps-im-keyusage-latest</dd>
+<dd class="internet-draft">draft-ietf-lamps-im-keyusage-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-03-17" class="published">17 March 2024</time>
+<time datetime="2024-04-15" class="published">15 April 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-09-18">18 September 2024</time></dd>
+<dd class="expires"><time datetime="2024-10-17">17 October 2024</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1082,8 +1082,8 @@ certificates<a href="#section-abstract-1" class="pilcrow">¶</a></p>
       </h2>
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
-        The latest revision of this draft can be found at <span><a href="https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-mahy-lamps-im-keyusage.html">https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-mahy-lamps-im-keyusage.html</a></span>.
-        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-mahy-lamps-im-keyusage/">https://datatracker.ietf.org/doc/draft-mahy-lamps-im-keyusage/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+        The latest revision of this draft can be found at <span><a href="https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-ietf-lamps-im-keyusage.html">https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-ietf-lamps-im-keyusage.html</a></span>.
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-ietf-lamps-im-keyusage/">https://datatracker.ietf.org/doc/draft-ietf-lamps-im-keyusage/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
         LAMPS WG Working Group mailing list (<span><a href="mailto:lamps@ietf.org">mailto:lamps@ietf.org</a></span>),
@@ -1111,7 +1111,7 @@ certificates<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 18 September 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 17 October 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1232,9 +1232,9 @@ id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
 <p id="section-4-1">The Security Considerations of <span>[<a href="#RFC5280" class="cite xref">RFC5280</a>]</span> are applicable to this
-   document.  This extended key purpose does not introduce new security
-   risks but instead reduces existing security risks by providing means
-   to identify if the certificate is generated to sign IM credentials.<a href="#section-4-1" class="pilcrow">¶</a></p>
+document.  This extended key purpose does not introduce new security
+risks but instead reduces existing security risks by providing means
+to identify if the certificate is generated to sign IM identity credentials.<a href="#section-4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">

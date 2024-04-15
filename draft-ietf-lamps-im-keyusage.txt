@@ -4,12 +4,12 @@
 
 LAMPS WG                                                         R. Mahy
 Internet-Draft                                              Unaffiliated
-Intended status: Informational                             17 March 2024
-Expires: 18 September 2024
+Intended status: Informational                             15 April 2024
+Expires: 17 October 2024
 
 
  X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs
-                  draft-mahy-lamps-im-keyusage-latest
+                  draft-ietf-lamps-im-keyusage-latest
 
 Abstract
 
@@ -24,9 +24,9 @@ About This Document
    This note is to be removed before publishing as an RFC.
 
    The latest revision of this draft can be found at
-   https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-mahy-lamps-
+   https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-ietf-lamps-
    im-keyusage.html.  Status information for this document may be found
-   at https://datatracker.ietf.org/doc/draft-mahy-lamps-im-keyusage/.
+   at https://datatracker.ietf.org/doc/draft-ietf-lamps-im-keyusage/.
 
    Discussion of this document takes place on the LAMPS WG Working Group
    mailing list (mailto:lamps@ietf.org), which is archived at
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 September 2024.
+   This Internet-Draft will expire on 17 October 2024.
 
 Copyright Notice
 
@@ -121,7 +121,8 @@ Table of Contents
    The Security Considerations of [RFC5280] are applicable to this
    document.  This extended key purpose does not introduce new security
    risks but instead reduces existing security risks by providing means
-   to identify if the certificate is generated to sign IM credentials.
+   to identify if the certificate is generated to sign IM identity
+   credentials.
 
 5.  IANA Considerations
 
