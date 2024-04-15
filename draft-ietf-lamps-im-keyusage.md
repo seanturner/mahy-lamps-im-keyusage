@@ -107,9 +107,9 @@ id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
 # Security Considerations
 
 The Security Considerations of {{!RFC5280}} are applicable to this
-   document.  This extended key purpose does not introduce new security
-   risks but instead reduces existing security risks by providing means
-   to identify if the certificate is generated to sign IM credentials.
+document.  This extended key purpose does not introduce new security
+risks but instead reduces existing security risks by providing means
+to identify if the certificate is generated to sign IM identity credentials.
 
 # IANA Considerations
 
