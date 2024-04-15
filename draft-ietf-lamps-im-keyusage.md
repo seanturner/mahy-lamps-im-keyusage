@@ -3,7 +3,7 @@ title: "X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs"
 abbrev: "extendedKeyUsage for IM URIs"
 category: info
 
-docname: draft-mahy-lamps-im-keyusage-latest
+docname: draft-ietf-lamps-im-keyusage-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
@@ -24,7 +24,7 @@ venue:
   type: Working Group
   mail: lamps@ietf.org
   github: rohanmahy/mahy-lamps-im-keyusage
-  latest: https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-mahy-lamps-im-keyusage.html
+  latest: https://rohanmahy.github.io/mahy-lamps-im-keyusage/draft-ietf-lamps-im-keyusage.html
 
 author:
  -
