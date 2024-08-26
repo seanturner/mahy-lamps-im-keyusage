@@ -126,7 +126,7 @@ module OID in the "SMI Security for PKIX Module Identifier" registry (1.3.6.1.5.
 
 | Decimal | Description   | References |
 |:--------|:--------------|:-----------|
-| TBD2    | id-kp-im-eku  | This-RFC   |
+| TBD2    | id-mod-im-eku  | This-RFC   |
 
 --- back
 
